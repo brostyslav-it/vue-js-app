@@ -6,38 +6,45 @@ import JobView from "@/views/JobView.vue"
 import AddJobView from "@/views/AddJobView.vue"
 import EditJobView from "@/views/EditJobView.vue"
 
-export default createRouter({
+const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
     routes: [
         {
             path: '/',
-            name: 'home',
-            component: HomeView
+            component: HomeView,
+            meta: { title: 'Home page' }
         },
         {
             path: '/jobs',
-            name: 'jobs',
-            component: JobsView
+            component: JobsView,
+            meta: { title: 'Jobs page' }
         },
         {
             path: '/jobs/:id',
-            name: 'job',
-            component: JobView
+            component: JobView,
+            meta: { title: 'Job page' }
         },
         {
             path: '/jobs/add',
-            name: 'add-job',
-            component: AddJobView
+            component: AddJobView,
+            meta: { title: 'Add job page' }
         },
         {
             path: '/jobs/edit/:id',
-            name: 'edit-job',
-            component: EditJobView
+            component: EditJobView,
+            meta: { title: 'Edit job page' }
         },
         {
             path: '/:catchAll(.*)',
-            name: 'not-found',
-            component: NotFoundView
+            component: NotFoundView,
+            meta: { title: 'Not found' }
         }
     ]
-});
+})
+
+router.beforeEach((to, from, next) => {
+    document.title = to.meta.title || 'My Vue App';
+    next();
+})
+
+export default router
