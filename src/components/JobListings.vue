@@ -19,10 +19,9 @@ const state = reactive({
 
 onMounted(async () => {
   try {
-    await new Promise(r => setTimeout(r, 2000))
-    state.jobs = (await axios.get('http://localhost:5000/jobs')).data
+    state.jobs = (await axios.get('/api/jobs')).data
   } catch (e) {
-    console.log('Error fetching jobs: ', e)
+    console.error(e)
   } finally {
     state.isLoading = false
   }
