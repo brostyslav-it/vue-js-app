@@ -83,6 +83,34 @@
         "contactEmail": "contact@ipsumlorem.com",
         "contactPhone": "555-555-5555"
       }
+    },
+    {
+      "id": "553e",
+      "title": "Tara Mcclure",
+      "type": "Part-Time",
+      "description": "Sed minim eos eius i",
+      "salary": "Under $50K",
+      "location": "Magnam reprehenderit",
+      "company": {
+        "name": "Lewis and Bowers Traders",
+        "description": "Unde amet sapiente ",
+        "contactEmail": "kabucopage@mailinator.com",
+        "contactPhone": "+1 (643) 921-9447"
+      }
+    },
+    {
+      "id": "b9d1",
+      "title": "Sydney Robinson",
+      "type": "Full-Time",
+      "description": "Ipsum voluptatem ma",
+      "salary": "$100K - $125K",
+      "location": "Asperiores a vero cu",
+      "company": {
+        "name": "Colon Gray Associates",
+        "description": "In velit et duis iu",
+        "contactEmail": "tosivubuhy@mailinator.com",
+        "contactPhone": "+1 (707) 283-7518"
+      }
     }
   ]
 }
