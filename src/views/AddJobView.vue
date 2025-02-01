@@ -1,8 +1,8 @@
 <script setup>
 import {reactive} from "vue";
 import axios from "axios";
-import router from "@/router/index.js";
 import {useToast} from "vue-toastification";
+import {useRouter} from "vue-router";
 
 const form = reactive({
   title: '',
@@ -18,6 +18,7 @@ const form = reactive({
   }
 })
 
+const router = useRouter()
 const toast = useToast()
 
 const handleSubmit = async () => {
