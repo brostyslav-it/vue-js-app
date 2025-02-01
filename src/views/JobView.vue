@@ -1,13 +1,13 @@
 <script setup>
 import PulseLoader from "vue-spinner/src/PulseLoader.vue"
-import {useRoute, useRouter} from "vue-router";
-import {onMounted, reactive} from "vue";
-import axios from "axios";
-import BackButton from "@/components/BackButton.vue";
-import {useToast} from "vue-toastification";
+import {useRoute} from "vue-router"
+import {onMounted, reactive} from "vue"
+import axios from "axios"
+import BackButton from "@/components/BackButton.vue"
+import {useToast} from "vue-toastification"
+import router from "@/router/index.js"
 
 const jobId = useRoute().params.id
-const router = useRouter()
 const toast = useToast()
 
 const state = reactive({

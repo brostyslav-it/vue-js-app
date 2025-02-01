@@ -1,5 +1,5 @@
 <script setup>
-import {computed, ref} from "vue";
+import {computed, ref} from "vue"
 
 const props = defineProps({
   job: {
